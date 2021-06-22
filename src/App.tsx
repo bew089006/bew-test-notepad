@@ -9,10 +9,12 @@ function App() {
   const { values, errors, touched } = useFormikContext<any>()
 
   return (
-    <div className={styles.App}>
-      <div className={styles.wrapper}>
-        <NavSideBar />
-        <div className="wapperBody">
+    <div className="App">
+      <div className="wrapper" style={{ display: 'flex', height: '100%' }}>
+        <div style={{ flex: '2' }}>
+          <NavSideBar />
+        </div>
+        <div className="wapperBody" style={{ width: '100%', flex: '5' }}>
           <NavTopBar />
           <ContentComponant />
         </div>

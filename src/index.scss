@@ -1,5 +1,7 @@
-body {
-  margin: 0;
+html, body {
+  margin: 0px;
+  width: 100%;
+  height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -12,11 +14,6 @@ code {
     monospace;
 }
 
-
-.wrapper {
-  width: 100px;
-  height: 100px;
-  display: flex;
-  flex-direction: rows;
-  background-color: red;
+body > #root > div {
+  height: 100vh;
 }

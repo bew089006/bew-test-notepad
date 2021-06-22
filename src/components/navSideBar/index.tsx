@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import styles from './index.module.scss'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faFolder } from '@fortawesome/free-solid-svg-icons'
 
 interface IListCards {
   id: string
@@ -50,32 +50,36 @@ const mockupListCards: IListCards[] = [
 ]
 
 export const Content: React.FC<any> = (props: { data: IListCards }) => {
-  console.log(props)
   return (
     <div className={styles.content}>
       <div className={styles.title}>{props.data.title}</div>
       <div className={styles.detail}>
         <div>{props.data.updatedAt}</div>
         <div className={styles.contentDetail}>
-          <div className={styles.icon}>Icon</div>
+          <div className={styles.icon}>
+            <FontAwesomeIcon icon={faFolder} />
+          </div>
           <div className={styles.note}>{props.data.note}</div>
         </div>
       </div>
     </div>
   )
-  // return <></>
 }
 
 const MainPage: React.FC = () => {
   return (
     <nav className={styles.wrapper}>
-      <div className={styles.upperBar}>
-        <FontAwesomeIcon icon={faBars} width="15px" height="15px" className={styles.icon} />
+      <div className={styles.content_wrapper}>
+        <div className={styles.upperBar}>
+          <FontAwesomeIcon icon={faBars} width="15px" height="15px" className={styles.icon} />
+        </div>
+        <div className={styles.tag}>
+          <h5>Notes</h5>
+        </div>
+        {mockupListCards.map((ele: IListCards, index: number) => {
+          return <Content key={index} data={ele} />
+        })}
       </div>
-      <h5>Notes</h5>
-      {mockupListCards.map((ele: IListCards, index: number) => {
-        return <Content key={index} data={ele} />
-      })}
     </nav>
   )
 }
