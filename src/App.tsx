@@ -1,12 +1,12 @@
-import React from 'react'
-import { useFormikContext, withFormik, Form, Field } from 'formik'
+// import React from 'react'
+// import { useFormikContext, withFormik, Form, Field } from 'formik'
 import ContentComponant from './components/contentComponant'
 import NavSideBar from './components/navSideBar'
 import NavTopBar from './components/navTopBar'
-import styles from './app.module.scss'
+// import styles from './app.module.scss'
 
 function App() {
-  const { values, errors, touched } = useFormikContext<any>()
+  // const { values, errors, touched } = useFormikContext<any>()
 
   return (
     <div className="App">
@@ -23,16 +23,16 @@ function App() {
   )
 }
 
-const EnhancedApp = withFormik({
-  mapPropsToValues: (props) => ({
-    //
-  }),
-  validate: (values) => {
-    //
-  },
-  handleSubmit: (values, { setFieldValue }) => {
-    // console.log(values)
-  },
-})(App)
+// const EnhancedApp = withFormik({
+//   mapPropsToValues: (props) => ({
+//     //
+//   }),
+//   validate: (values) => {
+//     //
+//   },
+//   handleSubmit: (values, { setFieldValue }) => {
+//     // console.log(values)
+//   },
+// })(App)
 
-export default EnhancedApp
+export default App
