@@ -3,13 +3,14 @@ import { useFormikContext, withFormik, Form, Field } from 'formik'
 import ContentComponant from './components/contentComponant'
 import NavSideBar from './components/navSideBar'
 import NavTopBar from './components/navTopBar'
+import styles from './app.module.scss'
 
 function App() {
   const { values, errors, touched } = useFormikContext<any>()
 
   return (
-    <div className="App" style={{ display: 'flex' }}>
-      <div style={{ width: '-webkit-fill-available', overflow: 'hidden' }}>
+    <div className={styles.App}>
+      <div className={styles.wrapper}>
         <NavSideBar />
         <div className="wapperBody">
           <NavTopBar />

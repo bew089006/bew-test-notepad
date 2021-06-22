@@ -1,0 +1,42 @@
+.wrapper {
+  border-right: solid 1px;
+  width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .upperBar {
+    display: flex;
+    align-items:center;
+    height: 50px;
+    border-bottom: solid 1px;
+
+    .icon {
+      margin-left: 15px;
+    }
+  }
+
+  .content {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px;
+
+    .title {
+      font-size: 18px;
+    }
+    .detail {
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+
+      .contentDetail {
+        display: flex;
+        justify-content: space-between;
+        .icon {}
+
+        .note {}
+      }
+    }
+  }
+}
